@@ -99,13 +99,13 @@ body{
 }
 
 /* Thank You Popup */
-#thankyouPopup{
+#thankyouPopup, #sorryPopup{
   display:none;
   position:fixed;left:0;top:0;width:100%;height:100%;
   background:rgba(0,0,0,0.5);
   z-index:1100;align-items:center;justify-content:center;
 }
-#thankyouPopup .box{
+#thankyouPopup .box, #sorryPopup .box{
   background:#fff;
   padding:22px;
   border-radius:16px;
@@ -115,6 +115,8 @@ body{
   box-shadow:0 10px 30px rgba(0,0,0,0.3);
   animation:popIn 0.4s ease;
 }
+#thankyouPopup h2{color:#a81f63;margin-top:0}
+#sorryPopup h2{color:#d11;margin-top:0}
 @keyframes popIn{
   from{transform:scale(0.8);opacity:0}
   to{transform:scale(1);opacity:1}
@@ -204,10 +206,22 @@ body{
     <!-- Thank You Popup -->
     <div id="thankyouPopup">
       <div class="box">
-        <h2 style="color:#a81f63;margin-top:0">🌸 धन्यवाद 🌸</h2>
-        <p style="color:#333;font-size:15px;line-height:1.5">
+        <h2>🌸 धन्यवाद 🌸</h2>
+        <p>
           आपकी उपस्थिति हमारे लिए <b>बहुत विशेष</b> है।  
           हम आपको कार्यक्रम में देखने के लिए उत्साहित हैं! 🙏💐
+        </p>
+      </div>
+    </div>
+
+    <!-- Sorry Popup -->
+    <div id="sorryPopup">
+      <div class="box">
+        <h2>💔 अफसोस</h2>
+        <p>
+          हमें खेद है कि आप इस शुभ अवसर पर नहीं आ पाएंगे।  
+          आपकी कमी हमें अवश्य खलेगी 🙏  
+          फिर भी आपका आशीर्वाद सदा हमारे साथ है 🌸
         </p>
       </div>
     </div>
